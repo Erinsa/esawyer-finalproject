@@ -183,33 +183,12 @@ class Card extends Component {
       this.props.setParentFlippedCard(hasFlippedCard_var)
 
     }
-
-    // this.setState({
-    //   flip: true,
-    //   // hasFlippedCard: hasFlippedCard_var,
-    //   // firstCard: firstCard_var
-    // })
-
-
-    // this.setState({
-    //   flip: !this.state.flip,
-    //   // hasFlippedCard: hasFlippedCard_var,
-    //   // firstCard: firstCard_var
-    // })
-    // console.log(this.state.flip)
-
-    // if (!this.state.hasFlippedCard) {
-    //   hasFlippedCard = true;
-    //   firstCard = this;
-    // }
   };
 
   toggleFlip() {
     let new_flip_state = !this.state.flip;
     this.setState({
       flip: new_flip_state,
-      // hasFlippedCard: hasFlippedCard_var,
-      // firstCard: firstCard_var
     }, this.toggleFlipAction)
   }
   toggleFlipKey(e) {
@@ -217,8 +196,6 @@ class Card extends Component {
     let new_flip_state = !this.state.flip;
     this.setState({
       flip: new_flip_state,
-      // hasFlippedCard: hasFlippedCard_var,
-      // firstCard: firstCard_var
     }, this.toggleFlipAction)
   }
   }
@@ -227,7 +204,6 @@ class Card extends Component {
 
     const flip_state = {
       transform: this.state.flip ? 'rotatey(180deg)' : '', 
-      // transform: this.state.flip == true ? `rotateY(-180deg)` : `rotateY(-180deg)`,
       transition: "transform 1s",
       transformStyle: "preserve-3d"
     };
@@ -236,49 +212,24 @@ class Card extends Component {
       visibility: this.state.matched ? 'hidden' : 'visible', 
       opacity: this.state.matched ? 0 : 1,
       transition: "visibility 0.3s linear,opacity 0.3s linear"
-      // transform: this.state.flip == true ? `rotateY(-180deg)` : `rotateY(-180deg)`,
-      // transition: "transform 2s",
-      // transformStyle: "preserve-3d"
     };
 
      const flip_matched_state = {
       visibility: this.state.matched ? 'hidden' : 'visible',
       transform: this.state.flip ? 'rotatey(180deg)' : '', 
-      // transform: this.state.flip == true ? `rotateY(-180deg)` : `rotateY(-180deg)`,
       transition: "transform 2s",
       transformStyle: "preserve-3d"
     };
 
-    // const visible_state = {
-    //   visibility: this.state.matched ? 'hidden' : 'visible', 
-    //   // transform: this.state.flip == true ? `rotateY(-180deg)` : `rotateY(-180deg)`,
-    //   // transition: "transform 2s",
-    //   // transformStyle: "preserve-3d"
-    // };
-
     return (
 
-        // <article className = "roll_card" >
-        // <div className='outer'>
-
-          // <div className='holder' onClick={() => {this.toggleFlip()}} style = {flip_state}>
-
-            // {/* <div classname = "outer">  */}
-                // <div className= "memory_card" onClick={() => {{this.toggleFlip()}; {this.toggleFlipAction()}}} style = {flip_state}>
-                <div className= "memory_card" onClick={() => {{this.toggleFlip()}}} onKeyDown={(e) => {{this.toggleFlipKey(e)}}} style = {flip_matched_state} tabIndex={0}>
-                    <img className = "back-face" src = {this.props.card_back_img_src} width = "200" alt = {this.props.card_back_img_alt} style={visible_state} />
-                    <img className = "front-face" src = {this.props.card_front_img_src} width = "200" alt = {this.props.card_front_img_alt} style={visible_state}/>
-                </div>
-            // {/* </div> */}
-
-          // </div>
-        // </div>
-
-
-            
-      // </article>
+      <div className= "memory_card" onClick={() => {{this.toggleFlip()}}} onKeyDown={(e) => {{this.toggleFlipKey(e)}}} style = {flip_matched_state} tabIndex={0} aria-label='Memory Card'>
+          <img className = "back-face" src = {this.props.card_back_img_src} width = "200" alt = {this.props.card_back_img_alt} style={visible_state} />
+          <img className = "front-face" src = {this.props.card_front_img_src} width = "200" alt = {this.props.card_front_img_alt} style={visible_state}/>
+      </div>
 
     );
+
   }
 }
 

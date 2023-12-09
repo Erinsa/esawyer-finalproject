@@ -271,7 +271,6 @@ class GamePage extends Component {
 
     return (
     
-
       <article className = "HomePage">
         <Link to="/menupage"><button className='menu_button' aria-label='Return to menu button'>Moji Match</button></Link>
 
@@ -285,90 +284,70 @@ class GamePage extends Component {
 
         <section className='matches_counter_expanded' style={match_collection_state}>
           Matches: {this.state.score}
-          {/* <div className = "score_holder_expanded">
-            {this.state.score}
-          </div> */}
           <div className = "matches_made_holder">
-          {this.state.matchList.map((collected_matchcard, idx) => 
-                   <CollectedMatch
-                      key={idx}
-                      collectedIndex={idx}
-                      card_name={collected_matchcard.card_name}
-                      card_img={collected_matchcard.card_img}
-                      card_img_alt={collected_matchcard.card_img_alt}
-                      card_match={collected_matchcard.card_match}
-                    />
-              )}
+            {this.state.matchList.map((collected_matchcard, idx) => 
+              <CollectedMatch
+                key={idx}
+                collectedIndex={idx}
+                card_name={collected_matchcard.card_name}
+                card_img={collected_matchcard.card_img}
+                card_img_alt={collected_matchcard.card_img_alt}
+                card_match={collected_matchcard.card_match}
+              />
+            )}
           </div>
-          <button className='minimize_button' onClick={() => {this.matchCollectionExpansionHandler()}}></button>
+          <button className='minimize_button' onClick={() => {this.matchCollectionExpansionHandler()}} aria-label='Minimize matches section button'></button>
         </section>
 
-
-        <button className='help_button' onClick={() => {this.instructionsExpansionHandler()}}>How to Play</button>
-        <div className='help_message' style = {instructions_state}>
+        <button className='help_button' onClick={() => {this.instructionsExpansionHandler()}} aria-label='How to play button'>How to Play</button>
+        <section className='help_message' style = {instructions_state}>
           <div className = "help_text"> Flip over cards to try to match the Japanese characters to their English meaning!</div>
           <button className='close_button' onClick={() => {this.instructionsExpansionHandler()}}></button>
+        </section>
+
+        <section className = "card_holder"> 
+          {this.state.cardData.map((matchcard, idx) => 
+            <Card
+            key={matchcard.card_name}
+            card_name = {matchcard.card_name}
+            cardIndex={idx}
+            card_term_text={matchcard.term_text}
+            card_back_img_src={matchcard.back_img_src}
+            card_back_img_alt={matchcard.back_img_alt}
+            card_front_img_src={matchcard.front_img_src}
+            card_front_img_alt={matchcard.front_img_alt}
+            card_match = {matchcard.match}
+            card_lang = {matchcard.lang}
+            hasFlippedCard = {this.state.hasFlippedCard}
+            firstCard = {this.state.firstCard}
+            secondCard = {this.state.secondCard}
+            score = {this.state.score}
+            setParentFlippedCard = {this.setParentFlippedCard}
+            setParentFirstCard = {this.setParentFirstCard}
+            setParentSecondCard = {this.setParentSecondCard}
+            setParentMatch = {this.setParentMatch}
+            setParentScore = {this.setParentScore}
+            addToMatchHandler = {this.addToMatchHandler}
+            />
+          )}  
+        </section>
+          
+        <div className='match_message'style={message_state} >
+          MATCH!
         </div>
-
-
-        
-        {/* <div className = 'test_holder' style={message_state}> */}
-          <div className='match_message'style={message_state} >
-            MATCH!
-          </div>
         <div className = "match_locker" style={match_locker_state}></div>
 
-        <div className='win_message' style={win_state}>
-          {/* <AttentionSeeker effect='bounce'> */}
-            <img className = "winning_squid" src = {"assets/Squid_Happy.png"} width = "200" alt = {"ADD"}  />
-          {/* </AttentionSeeker> */}
-        {/* <img className = "winning_squid" src = {"assets/Squid_Happy.png"} width = "200" alt = {"ADD"}  /> */}
-          <div className='winning_text'>CONGRATS! You've won! Great job studying!</div>
-          <div className='winning_button_holder'>
-          <Link to="/menupage"><button className='back_to_menu_button'>Return to Menu</button></Link>
-            {/* <button className='play_again_button' onClick={() => {this.checkState()}}>Play Again</button> */}
+        <section className='win_message' style={win_state}>
+          <img className = "winning_squid" src = {"assets/Squid_Happy.png"} width = "200" alt = {"ADD"}  />
+          <div className='winning_text'>
+            CONGRATS! You've won! Great job studying!
           </div>
-        </div>
+          <div className='winning_button_holder'>
+            <Link to="/menupage"><button className='back_to_menu_button'>Return to Menu</button></Link>
+          </div>
+        </section>
 
-
-            <section className = "card_holder"> 
-              
-              {this.state.cardData.map((matchcard, idx) => 
-                   <Card
-                    key={matchcard.card_name}
-                    card_name = {matchcard.card_name}
-                    cardIndex={idx}
-                    card_term_text={matchcard.term_text}
-                    card_back_img_src={matchcard.back_img_src}
-                    card_back_img_alt={matchcard.back_img_alt}
-                    card_front_img_src={matchcard.front_img_src}
-                    card_front_img_alt={matchcard.front_img_alt}
-                    card_match = {matchcard.match}
-                    card_lang = {matchcard.lang}
-                    hasFlippedCard = {this.state.hasFlippedCard}
-                    // firstCard = {}
-                    firstCard = {this.state.firstCard}
-                    secondCard = {this.state.secondCard}
-                    score = {this.state.score}
-
-                    // onToggleFlip = {this.toggleFlip}
-                    setParentFlippedCard = {this.setParentFlippedCard}
-                    setParentFirstCard = {this.setParentFirstCard}
-                    setParentSecondCard = {this.setParentSecondCard}
-                    setParentMatch = {this.setParentMatch}
-                    setParentScore = {this.setParentScore}
-                    addToMatchHandler = {this.addToMatchHandler}
-                    />
-              )}
-
-
-
-              
-            </section>
-
-          </article>
-
-        
+      </article>
 
     );
   }
