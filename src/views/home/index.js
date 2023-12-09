@@ -358,7 +358,7 @@ class GamePage extends Component {
         {/* <form action="portfolio.html">
           <button type="link" class="menu_button">Moji Match</button>
         </form> */}
-        <Link to="/"><button className='menu_button'>Moji Match</button></Link>
+        <Link to="/menupage"><button className='menu_button'>Moji Match</button></Link>
         <div className='matches_counter_small'>
           Matches:
           <div className = "score_holder">
@@ -405,7 +405,7 @@ class GamePage extends Component {
         {/* <img className = "winning_squid" src = {"assets/Squid_Happy.png"} width = "200" alt = {"ADD"}  /> */}
           <div className='winning_text'>CONGRATS! You've won! Great job studying!</div>
           <div className='winning_button_holder'>
-          {/* <Link to="/"><button className='back_to_menu_button'>Return to Menu</button></Link> */}
+          <Link to="/menupage"><button className='back_to_menu_button'>Return to Menu</button></Link>
             {/* <button className='play_again_button' onClick={() => {this.checkState()}}>Play Again</button> */}
           </div>
         </div>
