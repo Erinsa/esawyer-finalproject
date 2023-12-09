@@ -2,18 +2,28 @@ import logo from './logo.svg';
 import './App.css';
 import GamePage from './views/home/index.js';
 import MenuPage from './views/home/menu.js';
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter, BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <MenuPage/>
-     {/* <GamePage/> */}
-       <Routes>
-              <Route exact path='/' element={<MenuPage/>} />
-              <Route path='/gamepage' element={<GamePage/>} />
-        </Routes>
-    </div>
+    // <div className="App">
+    //   <MenuPage/>
+    //  {/* <GamePage/> */}
+    //    <Routes>
+    //           <Route exact path='/' element={<MenuPage/>} />
+    //           <Route path='/gamepage' element={<GamePage/>} />
+    //           <Route path = '/esawyer-finalproject' element={<MenuPage/>} />
+    //     </Routes>
+    // </div>
+    <>
+    <Router>
+                  <Routes>
+                      <Route path='/' element={<MenuPage />} />
+                      <Route path='/esawyer-final-project' element={<MenuPage />} />
+                      <Route path='/gamepage' element={<GamePage />} />
+                  </Routes>
+        </Router>
+      </>
   );
 }
 
