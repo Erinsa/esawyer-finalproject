@@ -10,7 +10,7 @@ import CollectedMatch from './collectedmatch.js';
 // import {JackInTheBox, Fade} from "react-awesome-reveal";
 // import { AttentionSeeker } from "react-awesome-reveal";
 import { Howl, Howler } from 'howler';
-// import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import MenuPage from './menu.js';
 import newSound from './assets/GameMusic_3DPlatformer.mp3';
 import ink from "./assets/Ink.png";
