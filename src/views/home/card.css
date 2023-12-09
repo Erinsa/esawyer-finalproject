@@ -30,7 +30,7 @@ anything else */
 /* the basis of the product cards - section is its flex parent and it is also a flex container */
 .memory_card {
     flex: 0 1 18%;
-    /* height: 18%; */
+    height: 24.5%;
     /* width: 200px; */
     /* height: 375px; */
     display: flex;
@@ -48,7 +48,7 @@ anything else */
     /* position: relative; */
     transform-style: preserve-3d;
     /* box-shadow: 1px 1px 0 rgba(0, 0, 0, .3); */
-    /* background-color: green; */
+    background-color: green;
     
 }
 

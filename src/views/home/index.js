@@ -12,6 +12,7 @@ import CollectedMatch from './collectedmatch.js';
 import { Howl, Howler } from 'howler';
 import { Link, Route, Routes } from 'react-router-dom';
 import MenuPage from './menu.js';
+import MusicPlayer from './music.js';
 import newSound from './assets/GameMusic_3DPlatformer.mp3';
 import ink from "./assets/Ink.png";
 
@@ -191,26 +192,26 @@ class GamePage extends Component {
       matchList: [],
       match_collection_expanded: false,
       instructions_expanded: false,
-      music: false, 
-      sound: new Howl({
-        src: ["assets/GameMusic_3DPlatformer.mp3"],
-        loop: true,
-        volume: 0.5,
-      })
+      // music: false, 
+      // sound: new Howl({
+      //   src: ["assets/GameMusic_3DPlatformer.mp3"],
+      //   loop: true,
+      //   volume: 0.5,
+      // })
     };
 
   };
 
-  musicController = () => { 
-    if (this.state.music == false){
-      this.state.sound.play();
-    }
-    else {
-      this.state.sound.pause()
-    }
-    let new_music_state = !this.state.music;
-    this.setState({music: new_music_state});
-  }
+  // musicController = () => { 
+  //   let new_music_state = !this.state.music;
+  //   this.setState({music: new_music_state});
+  //   if (this.state.music == false){
+  //     this.state.sound.play();
+  //   }
+  //   else {
+  //     this.state.sound.pause()
+  //   }
+  // }
 
   checkState = () => { 
     console.log("parent state", this.state.matchList); 
@@ -265,43 +266,6 @@ class GamePage extends Component {
     this.setState({instructions_expanded: new_state}); 
   }
 
-  // toggleFlip() {
-  //   this.setState({
-  //     flip_state: !this.state.flip
-  //   })
-  // };
-
-  // toggleFlip() {
-
-  //   let hasFlippedCard_var = this.state.hasFlippedCard;
-  //   let firstCard_var = this.state.firstCard;
-
-  //   if (this.state.hasFlippedCard == true) {
-  //     if (this.props.card_match == this.state.firstCard.card_match){
-  //       this.state.firstCard.removeEventListener('click');
-  //       this.removeEventListener('click');
-  //     }
-  //   }
-
-  //   if (this.state.hasFlippedCard == false) {
-  //     console.log("flippy",)
-  //     let hasFlippedCard_var = true;
-  //     let firstCard_var = this;
-  //   }
-
-
-  //   this.setState({
-  //     flip: !this.state.flip,
-  //     hasFlippedCard: hasFlippedCard_var,
-  //     firstCard: firstCard_var
-  //   })
-  //   console.log(this.state.flip)
-
-  //   // if (!this.state.hasFlippedCard) {
-  //   //   hasFlippedCard = true;
-  //   //   firstCard = this;
-  //   // }
-  // };
 
   render() {
 
@@ -335,19 +299,13 @@ class GamePage extends Component {
       // transformStyle: "preserve-3d"
     };
 
-    // const music_state = {
-    //   style : this.state.music ? , 
-    //   // transform: this.state.flip == true ? `rotateY(-180deg)` : `rotateY(-180deg)`,
-    //   // transition: "transform 2s",
-    //   // transformStyle: "preserve-3d"
-    // };
-
     return (
     
 
       <div className = "Outside">
       <div className = "HomePage">
-      <button className= {this.state.music ? 'music_button_true' : 'music_button_false'} onClick={() => {this.musicController()}}></button>
+      {/* <button className= {this.state.music ? 'music_button_true' : 'music_button_false'} onClick={() => {this.musicController()}}></button> */}
+      {/* <MusicPlayer/> */}
         <button className='help_button' onClick={() => {this.instructionsExpansionHandler()}}>How to Play</button>
         <div className='help_message' style = {instructions_state}>
           <div className = "help_text"> Flip over cards to try to match the Japanese characters to their English meaning!</div>

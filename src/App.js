@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import GamePage from './views/home/index.js';
 import MenuPage from './views/home/menu.js';
+import MusicPlayer from './views/home/music.js';
 import Home from './views/home/Home.js';
 import { Routes, Route, HashRouter, BrowserRouter as Router} from 'react-router-dom';
 
@@ -25,6 +26,7 @@ function App() {
                       <Route path='/menupage' element={<MenuPage />} />
                   </Routes>
         </Router>
+        <MusicPlayer />
       </>
   );
 }

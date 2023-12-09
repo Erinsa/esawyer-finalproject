@@ -87,9 +87,13 @@ class Card extends Component {
     let secondCard_var = this.props.secondCard;
 
     if (hasFlippedCard_var == true) {
+      // if (firstCard_var.lang == this.lang){
+
+      // }
+      // if (firstCard_var.lang != this.lang) {
       this.props.setParentSecondCard(this)
       // console.log("match 1:", this.props.card_match, "match 2:", this.props.firstCard.props.card_match);
-      if (this.props.card_match == this.props.firstCard.props.card_match){
+      if (this.props.card_match == this.props.firstCard.props.card_match && firstCard_var != this){
         console.log("match");
         // this.props.firstCard.removeEventListener('click');
         // this.removeEventListener('click');
@@ -126,7 +130,14 @@ class Card extends Component {
           this.props.setParentMatch(new_match_state2)
           this.props.setParentScore(new_score)
         }, 2000); 
+      // }
         
+
+      }
+      if (firstCard_var == this){
+        this.props.setParentFirstCard("")
+        // this.props.setParentSecondCard("")
+        this.props.setParentFlippedCard(false)
 
       }
       else {
@@ -201,6 +212,16 @@ class Card extends Component {
       // firstCard: firstCard_var
     }, this.toggleFlipAction)
   }
+  toggleFlipKey(e) {
+    if (e.key === 'Enter') {
+    let new_flip_state = !this.state.flip;
+    this.setState({
+      flip: new_flip_state,
+      // hasFlippedCard: hasFlippedCard_var,
+      // firstCard: firstCard_var
+    }, this.toggleFlipAction)
+  }
+  }
 
   render() {
 
@@ -244,9 +265,9 @@ class Card extends Component {
 
             // {/* <div classname = "outer">  */}
                 // <div className= "memory_card" onClick={() => {{this.toggleFlip()}; {this.toggleFlipAction()}}} style = {flip_state}>
-                <div className= "memory_card" onClick={() => {{this.toggleFlip()}}} style = {flip_matched_state}>
+                <div className= "memory_card" onClick={() => {{this.toggleFlip()}}} onKeyDown={(e) => {{this.toggleFlipKey(e)}}} style = {flip_matched_state} tabIndex={0}>
                     <img className = "back-face" src = {this.props.card_back_img_src} width = "200" alt = {this.props.card_back_img_alt} style={visible_state} />
-                    <img className = "front-face" src = {this.props.card_front_img_src} width = "200" alt = {this.props.card_front_img_alt} style={visible_state}  />
+                    <img className = "front-face" src = {this.props.card_front_img_src} width = "200" alt = {this.props.card_front_img_alt} style={visible_state}/>
                 </div>
             // {/* </div> */}
 

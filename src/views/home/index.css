@@ -124,6 +124,7 @@ body {
   color: #018E8E;
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  text-align: center;
   /* color: white; */
   /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
   background-image: url("../../../public/assets/Match_Message.png");
@@ -184,7 +185,7 @@ body {
   margin: 0;
   /* padding: 20px; */
   column-gap: 3%;
-  row-gap: 10%;
+  row-gap: 3%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -247,7 +248,8 @@ body {
   top: 5%;
   right: 69%;
   font-size: 4vw;
-  color: #018E8E;
+  /* color: #018E8E; */
+  color:#FF7183;
   border: none;
   background-color: rgba(0, 0, 0, 0);
   /* color: white; */
@@ -275,7 +277,7 @@ body {
   /* margin: 1% 1% 1% 10%; */
   /* color: white; */
   /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
-  background-image: url("../../../public/assets/Match_Background.png");
+  background-image: url("../../../public/assets/New_Matches_Holder.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -314,7 +316,7 @@ body {
   /* margin: 1% 1% 1% 10%; */
   /* color: white; */
   /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
-  background-image: url("../../../public/assets/Match_Background.png");
+  background-image: url("../../../public/assets/New_Matches_Holder.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -358,6 +360,7 @@ body {
   width: 64%;
   height: 47%;
   position: absolute;
+  text-align: center;
   top: 51%;
   right: 46%;
   font-size: 3vw;
@@ -380,6 +383,7 @@ body {
 
 .winning_text{
   position: absolute;
+  text-align: center;
   top: 180%;
 
 }
@@ -429,7 +433,7 @@ body {
     background-position: bottom;
   }
 
-  .music_button_true {
+  /* .music_button_true {
     width: 6%;
     height: 6%;
     position: absolute;
@@ -437,17 +441,17 @@ body {
     right: 64%;
     color: #018E8E;
     border: none;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0); */
     /* color: white; */
     /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
-    background-image: url("../../../public/assets/Music_Button.png");
+    /* background-image: url("../../../public/assets/Music_Button.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
   
-  }
+  } */
 
-  .music_button_false {
+  /* .music_button_false {
     width: 6%;
     height: 6%;
     position: absolute;
@@ -455,13 +459,13 @@ body {
     right: 64%;
     color: #018E8E;
     border: none;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0); */
     /* color: white; */
     /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
-    background-image: url("../../../public/assets/No_Music_Button.png");
+    /* background-image: url("../../../public/assets/No_Music_Button.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
   
-  }
+  } */
 
