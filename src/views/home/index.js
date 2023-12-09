@@ -4,13 +4,12 @@ import React, { Component } from 'react';
 import './index.css';
 import Card from './card.js';
 import CollectedMatch from './collectedmatch.js';
-import {JackInTheBox, Fade} from "react-awesome-reveal";
-// import { AttentionSeeker } from "react-awesome-reveal";
 import { Link } from 'react-router-dom';
 
 class GamePage extends Component {
   constructor(props) {
     super(props);
+    // this.shuffler.bind(this); 
     this.state = {
       cardData: [
         {
@@ -173,7 +172,7 @@ class GamePage extends Component {
           front_img_src: "assets/cards/Car_Card_Japanese.png",
           front_img_alt: "Picture",
         },
-      ],
+      ].sort(() => Math.random() - 0.5),
       score: 0,
       hasFlippedCard: false,
       firstCard: "",
@@ -242,6 +241,15 @@ class GamePage extends Component {
     this.setState({instructions_expanded: new_state}); 
   }
 
+  // shuffler = (cardData) => { 
+  //   let new_card_data = cardData;
+  //   new_card_data.sort(() => Math.random() - 0.5)
+  //   this.setState(prevState => ({
+  //     ...prevState,
+  //     cardData: new_card_data,
+  //   }))
+  // }
+
 
   render() {
 
@@ -268,6 +276,7 @@ class GamePage extends Component {
       opacity: this.state.win ? 1 : 0,
       transition: "visibility 0.3s linear,opacity 0.3s linear"
     };
+
 
     return (
     
