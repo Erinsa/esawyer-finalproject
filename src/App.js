@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import GamePage from './views/home/index.js';
 import MenuPage from './views/home/menu.js';
+import Home from './views/home/Home.js';
 import { Routes, Route, HashRouter, BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
     <>
     <Router>
                   <Routes>
-                      <Route path='/' element={<MenuPage />} />
+                      <Route path='/' element={<Home />} />
                       <Route path='/esawyer-final-project' element={<MenuPage />} />
                       <Route path='/gamepage' element={<GamePage />} />
                   </Routes>
