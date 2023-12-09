@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import GamePage from './index.js';
 // import { useState } from 'react';
 // import { AttentionSeeker } from "react-awesome-reveal";
