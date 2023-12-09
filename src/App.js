@@ -6,14 +6,14 @@ import { Routes, Route, HashRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      {/* <MenuPage/>
-      <GamePage/> */}
+    // <div className="App">
+    //   {/* <MenuPage/> */}
+    //   {/* <GamePage/> */}
        <Routes>
-              <Route path='/' component={MenuPage} />
-              <Route path='/gamepage' component={GamePage} />
+              <Route exact path='/' element={<MenuPage/>} />
+              <Route path='/gamepage' element={<GamePage/>} />
         </Routes>
-    </div>
+    // </div>
   );
 }
 
