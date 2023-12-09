@@ -1,20 +1,12 @@
 // Used lab activity (notecard) for reference
 
 import React, { Component } from 'react';
-// import { useState } from 'react';
 import './index.css';
 import Card from './card.js';
 import CollectedMatch from './collectedmatch.js';
-// import Header from './header.js';
-// import Cart from './cart.js';
-// import {JackInTheBox, Fade} from "react-awesome-reveal";
+import {JackInTheBox, Fade} from "react-awesome-reveal";
 // import { AttentionSeeker } from "react-awesome-reveal";
-import { Howl, Howler } from 'howler';
-import { Link, Route, Routes } from 'react-router-dom';
-import MenuPage from './menu.js';
-import MusicPlayer from './music.js';
-import newSound from './assets/GameMusic_3DPlatformer.mp3';
-import ink from "./assets/Ink.png";
+import { Link } from 'react-router-dom';
 
 class GamePage extends Component {
   constructor(props) {
@@ -192,26 +184,10 @@ class GamePage extends Component {
       matchList: [],
       match_collection_expanded: false,
       instructions_expanded: false,
-      // music: false, 
-      // sound: new Howl({
-      //   src: ["assets/GameMusic_3DPlatformer.mp3"],
-      //   loop: true,
-      //   volume: 0.5,
-      // })
     };
 
   };
 
-  // musicController = () => { 
-  //   let new_music_state = !this.state.music;
-  //   this.setState({music: new_music_state});
-  //   if (this.state.music == false){
-  //     this.state.sound.play();
-  //   }
-  //   else {
-  //     this.state.sound.pause()
-  //   }
-  // }
 
   checkState = () => { 
     console.log("parent state", this.state.matchList); 
@@ -273,9 +249,6 @@ class GamePage extends Component {
       visibility: this.state.match ? 'visible': 'hidden', 
       opacity: this.state.match ? .9 : 0,
       transition: "visibility 0.3s linear, opacity 0.3s linear"
-      // transform: this.state.flip == true ? `rotateY(-180deg)` : `rotateY(-180deg)`,
-      // transition: "transform 2s",
-      // transformStyle: "preserve-3d"
     };
 
     const match_locker_state = {
@@ -294,38 +267,23 @@ class GamePage extends Component {
       visibility: this.state.score == this.state.num_matches ? 'visible': 'hidden', 
       opacity: this.state.win ? 1 : 0,
       transition: "visibility 0.3s linear,opacity 0.3s linear"
-      // transform: this.state.flip == true ? `rotateY(-180deg)` : `rotateY(-180deg)`,
-      // transition: "transform 2s",
-      // transformStyle: "preserve-3d"
     };
 
     return (
     
 
-      <div className = "Outside">
-      <div className = "HomePage">
-      {/* <button className= {this.state.music ? 'music_button_true' : 'music_button_false'} onClick={() => {this.musicController()}}></button> */}
-      {/* <MusicPlayer/> */}
-        <button className='help_button' onClick={() => {this.instructionsExpansionHandler()}}>How to Play</button>
-        <div className='help_message' style = {instructions_state}>
-          <div className = "help_text"> Flip over cards to try to match the Japanese characters to their English meaning!</div>
-          <button className='close_button' onClick={() => {this.instructionsExpansionHandler()}}></button>
-        </div>
+      <article className = "HomePage">
+        <Link to="/menupage"><button className='menu_button' aria-label='Return to menu button'>Moji Match</button></Link>
 
-        {/* <Link className='menu_button' to="/menupage">Moji Match</Link> */}
-        {/* <form action="portfolio.html">
-          <button type="link" class="menu_button">Moji Match</button>
-        </form> */}
-        <Link to="/menupage"><button className='menu_button'>Moji Match</button></Link>
-        <div className='matches_counter_small'>
+        <section className='matches_counter_small'>
           Matches:
           <div className = "score_holder">
             {this.state.score}
           </div>
-          <button className='expand_button' onClick={() => {this.matchCollectionExpansionHandler()}}></button>
-        </div>
+          <button className='expand_button' onClick={() => {this.matchCollectionExpansionHandler()}} aria-label='Expand matches section button'></button>
+        </section>
 
-        <div className='matches_counter_expanded' style={match_collection_state}>
+        <section className='matches_counter_expanded' style={match_collection_state}>
           Matches: {this.state.score}
           {/* <div className = "score_holder_expanded">
             {this.state.score}
@@ -343,18 +301,22 @@ class GamePage extends Component {
               )}
           </div>
           <button className='minimize_button' onClick={() => {this.matchCollectionExpansionHandler()}}></button>
+        </section>
+
+
+        <button className='help_button' onClick={() => {this.instructionsExpansionHandler()}}>How to Play</button>
+        <div className='help_message' style = {instructions_state}>
+          <div className = "help_text"> Flip over cards to try to match the Japanese characters to their English meaning!</div>
+          <button className='close_button' onClick={() => {this.instructionsExpansionHandler()}}></button>
         </div>
 
+
+        
         {/* <div className = 'test_holder' style={message_state}> */}
-        {/* <Fade> */}
           <div className='match_message'style={message_state} >
             MATCH!
           </div>
-        {/* </Fade> */}
-          {/* </div> */}
-        <div className = "match_locker" style={match_locker_state}>
-
-        </div>
+        <div className = "match_locker" style={match_locker_state}></div>
 
         <div className='win_message' style={win_state}>
           {/* <AttentionSeeker effect='bounce'> */}
@@ -369,8 +331,7 @@ class GamePage extends Component {
         </div>
 
 
-            <div className = "rollcard-list"> 
-
+            <section className = "card_holder"> 
               
               {this.state.cardData.map((matchcard, idx) => 
                    <Card
@@ -403,16 +364,9 @@ class GamePage extends Component {
 
 
               
-            </div>
+            </section>
 
-          </div>
-
-        {/* <Routes>
-          <Route exact path="/" element={<MenuPage />} />
-          <Route path="/gamepage" element={<GamePage />} />
-        </Routes> */}
-
-        </div>
+          </article>
 
         
 

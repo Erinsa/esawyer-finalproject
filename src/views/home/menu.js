@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import GamePage from './index.js';
-// import { useState } from 'react';
-// import { AttentionSeeker } from "react-awesome-reveal";
+import { Link } from 'react-router-dom';
+import { AttentionSeeker } from "react-awesome-reveal";
 import './menu.css';
 
 class MenuPage extends Component {
@@ -18,30 +16,20 @@ class MenuPage extends Component {
       
       return (
       
-  
-      <div className = "Outside">
-        <div className = "menu_page">
-            <div className='main_holder'>
-            <Link to="/gamepage"><button className='play_button'>Play!</button></Link>
-          <button className='menu_menu_button'>Moji Match</button>
-          {/* <AttentionSeeker effect = "pulse"> */}
-          <img className = "menu_squid" src = {"Menu_Squid.png"} width = "200" alt = {"ADD"}  />
-          {/* </AttentionSeeker> */}
-          <img className = "menu_bubble" src = {"assets/Menu_Bubble.png"} width = "200" alt = {"ADD"}  />
+        <article className='main_holder'>
 
-          {/* <Link to="/gamepage"><button className='menu_menu_button'>Moji Match</button></Link> */}
+          <header className='menu_title'>Moji Match</header>
 
-          {/* <Routes>
-          <Route path="/" element={<MenuPage />} />
-            {/* <Route path="/menupage" element={<MenuPage />} /> */}
-            {/* <Route path="/menupage" element={<MenuPage />} /> */}
-            {/* <Route path="/gamepage" element={<GamePage />} />
-          </Routes> */}
+          <Link to="/gamepage"><button className='play_button' aria-label = "Play Button">Play!</button></Link>
+
+          <AttentionSeeker className = "reveal_squid" effect = "pulse" duration = "2000" triggerOnce = "false">
+            <img className = "menu_squid" src = {"Menu_Squid.png"} width = "200" alt = {"A cheery, green cartoonish squid holding a burst of ink, a Japanese flag, a pencil, a caligraphy pen, a Michigan State University Japanese Department flag, a paint brush, and paper for practicing Japanese characters. "}  />
+          </AttentionSeeker>
+          <AttentionSeeker className = "reveal_bubble" effect = "pulse" duration = "2000" delay = "100" >
+            <img className = "menu_bubble" src = {"assets/Menu_Bubble.png"} width = "200" alt = {"A cartoonish bubble holding the Japanese Kanji character that amkes up the first half of the word Kanji in Japanese."}  />
+          </AttentionSeeker>
   
-        </div>
-  
-        </div>
-        </div>
+        </article>
   
       );
     }

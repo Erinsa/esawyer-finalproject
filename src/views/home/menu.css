@@ -1,24 +1,11 @@
-/* Got this from css lecture */
 * {
     box-sizing: border-box;
     font-family: "Itim", sans-serif;
-    /* max-width: 1300px; */
   }
-  
-  /* Referenced css lecture */
-  /* body { */
-    /* width: 1400px;
-    height: 1000px;
-    font-family: sans-serif;
-    font-size: 14px; */
-    /* margin: 50px; */
-    /* color: black;
-    background-image: url("../../../public/assets/cards/Background_Image_Play.png"); */
-  /* } */
   
 body {
     background-color: #018E8E;
-    /* width: 100% */
+    width: 100%
 }
   
 .menu_page{
@@ -38,24 +25,23 @@ body {
   padding: 0;
 }
 
-.menu_menu_button {
+.menu_title {
   width: 100%;
   height: 30%;
   position: absolute;
   top: 5%;
   right: 18%;
   font-size: 9vw;
-  color: #FF7183;
+  text-align: center;
+  color: black;
+  text-shadow: 2px 2px 0 white; 
   border: none;
   background-color: rgba(0, 0, 0, 0);
-  /* color: white; */
-  /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
   background-image: url("../../../public/assets/Menu_Button.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 0% 0% 1% 0%;
-
+  padding: 2.5% 0% 0% 0%;
 }
 
 .play_button {
@@ -68,26 +54,14 @@ body {
   color: white;
   border: none;
   background-color: rgba(0, 0, 0, 0);
-  /* color: white; */
-  /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
   background-image: url("../../../public/assets/Ink.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   padding: 0% 0% 1% 0%;
-
 }
 
 .main_holder{
-  /* width: 100%;
-  height: 58vw;
-  background-color: purple;
-  background-image: url("../../../public/assets/MojiMatchHome_AdjustedAgain4.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #018E8E;
-  background-position: center top; */
-  
   width: 100%;
   height: 57.6vw;
   position:relative;
@@ -105,22 +79,26 @@ body {
 }
 
 .menu_squid{
-  width: 36%;
-  
-  position: relative;
-  top: -7%;
-  left: 60%;
+  width: 100%;
   transform: rotate(4deg);
-  /* animation-duration: 3s;
-  animation-name: bounce;
-  animation-iteration-count: infinite; */
-  /* animation: 3s ease-in 1s infinite; */
+}
+
+.reveal_squid{
+  width: 36%;
+  position: absolute;
+  top: 28%;
+  left: 60%;
 }
 
 .menu_bubble{
+  width: 100%;
+  position: absolute;
+  transform: rotate(6deg);
+}
+
+.reveal_bubble{
   width: 25%;
   position: absolute;
-  top: 9%;
+  top: 10%;
   left: 77%;
-  transform: rotate(6deg);
 }

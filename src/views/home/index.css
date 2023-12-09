@@ -168,7 +168,7 @@ body {
 }
 
 /* Styling for roll card holder */
-.rollcard-list {
+.card_holder {
   width: 60%;
   height: 57.6vw;
   left: 40%;
@@ -249,7 +249,8 @@ body {
   right: 69%;
   font-size: 4vw;
   /* color: #018E8E; */
-  color:#FF7183;
+  color: black;
+  text-shadow: 1px 1px 0 white; 
   border: none;
   background-color: rgba(0, 0, 0, 0);
   /* color: white; */

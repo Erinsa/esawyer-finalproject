@@ -1,32 +1,8 @@
-/* Got this from css lecture */
 * {
     box-sizing: border-box;
     font-family: "Itim", sans-serif;
-    /* max-width: 1300px; */
   }
   
-  .body{
-    background-color: yellow;
-  }
-  
-  /* .music_holder{
-    width: 100%;
-    height: 100%;
-    position:relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom:0;
-    background-image: url("../../../public/assets/MojiMatchHome_AdjustedAgain4.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: yellow;;
-    background-position: center top;
-    margin: 0;
-    padding: 0;
-    /* z-index: 8; */
-  /* } */
-
 .music_button_true {
     width: 5vw;
     height: 5vw;
@@ -36,14 +12,11 @@
     color: #018E8E;
     border: none;
     background-color: rgba(0, 0, 0, 0);
-    /* color: white; */
-    /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
     background-image: url("../../../public/assets/Music_Button.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: 4;
-  
   }
 
   .music_button_false {
@@ -55,12 +28,9 @@
     color: #018E8E;
     border: none;
     background-color: rgba(0, 0, 0, 0);
-    /* color: white; */
-    /* box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5); */
     background-image: url("../../../public/assets/No_Music_Button.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: 4;
-  
   }
