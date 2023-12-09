@@ -17,7 +17,7 @@ function App() {
     //     </Routes>
     // </div>
     <>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
                   <Routes>
                       <Route path='/' element={<Home />} />
                       <Route path='/esawyer-final-project' element={<MenuPage />} />
