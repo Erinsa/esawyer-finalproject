@@ -19,8 +19,8 @@ function App() {
     <>
     <Router basename={process.env.PUBLIC_URL}>
                   <Routes>
-                      <Route path='/' element={<Home />} />
-                      <Route path='/esawyer-final-project' element={<MenuPage />} />
+                      {/* <Route path='/' element={<Home />} /> */}
+                      <Route path='/' element={<MenuPage />} />
                       <Route path='/gamepage' element={<GamePage />} />
                   </Routes>
         </Router>
