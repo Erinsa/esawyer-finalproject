@@ -42,9 +42,9 @@ render() {
   
       
     return (
-        // <div className='music_holder'>
-            <button className= {this.state.music ? 'music_button_true' : 'music_button_false'} onClick={() => {this.musicController()}}></button>
-        // </div>
+            // <label htmlFor= "music_button" className = "visuallyhidden">{"Music Controller: " + `${this.state.music ? "Music Currently On" : "Music Currently Off"}`}
+            <button id = "music_button" className= {this.state.music ? 'music_button_true' : 'music_button_false'} onClick={() => {this.musicController()}} aria-label= {"Music Controller: " + `${this.state.music ? "Music Currently On" : "Music Currently Off"}`}></button>
+            // </label>
         );
     }
   }
