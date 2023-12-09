@@ -2,12 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import GamePage from './views/home/index.js';
 import MenuPage from './views/home/menu.js';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <MenuPage/>
-      <GamePage/>
+      {/* <MenuPage/>
+      <GamePage/> */}
+       <Routes>
+              <Route path='/' component={MenuPage} />
+              <Route path='/gamepage' component={GamePage} />
+        </Routes>
     </div>
   );
 }

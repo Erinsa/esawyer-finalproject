@@ -25,9 +25,9 @@ class GamePage extends Component {
           term_text: "Tree_Eng",
           match: "Tree",
           lang: "Eng", 
-          back_img_src: "../assets/cards/Card_Back.png",
+          back_img_src: "assets/cards/Card_Back.png",
           back_img_alt: "Picture",
-          front_img_src: "../assets/cards/Tree_Card_English.png",
+          front_img_src: "assets/cards/Tree_Card_English.png",
           front_img_alt: "Picture",
         },
         {
@@ -358,7 +358,7 @@ class GamePage extends Component {
         {/* <form action="portfolio.html">
           <button type="link" class="menu_button">Moji Match</button>
         </form> */}
-        {/* <Link to="/"><button className='menu_button'>Moji Match</button></Link> */}
+        <Link to="/"><button className='menu_button'>Moji Match</button></Link>
         <div className='matches_counter_small'>
           Matches:
           <div className = "score_holder">

@@ -22,7 +22,7 @@ class MenuPage extends Component {
       <div className = "Outside">
         <div className = "menu_page">
             <div className='main_holder'>
-            {/* <Link to="/gamepage"><button className='play_button'>Play!</button></Link> */}
+            <Link to="/gamepage"><button className='play_button'>Play!</button></Link>
           <button className='menu_menu_button'>Moji Match</button>
           {/* <AttentionSeeker effect = "pulse"> */}
           <img className = "menu_squid" src = {"Menu_Squid.png"} width = "200" alt = {"ADD"}  />
