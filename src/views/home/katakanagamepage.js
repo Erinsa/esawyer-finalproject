@@ -3,10 +3,8 @@
 // Started with this reference for a memory game in vanilla javascript (no react) to help understand logic as I created the game in react
 // https://marina-ferreira.github.io/tutorials/js/memory-game/
 
-
-
 import React, { Component } from 'react';
-import './index.css';
+import './gamepage.css';
 import Card from './card.js';
 import CollectedMatch from './collectedmatch.js';
 import { Link } from 'react-router-dom';
@@ -28,8 +26,8 @@ class KatakanaGamePage extends Component {
             back_img_alt: "Cartoonish Squid Mascot (Card Back)",
             front_img_src: "assets/cards/Pi_Card_Katakana_English.png",
             front_img_alt: "The romanized sound for the katakana character pi represented by the letters p and i",
-          },
-          {
+        },
+        {
             card_name: "Pi_Jpn",
             term_text: "Pi_Jpn",
             match: "Pi",
@@ -38,8 +36,8 @@ class KatakanaGamePage extends Component {
             back_img_alt: "Cartoonish Squid Mascot (Card Back)",
             front_img_src: "assets/cards/Pi_Card_Katakana_Japanese.png",
             front_img_alt: "the Japanese katakana character for Pi",
-          },
-          {
+        },
+        {
             card_name: "A_Eng",
             term_text: "A_Eng",
             match: "A",
@@ -201,7 +199,6 @@ class KatakanaGamePage extends Component {
       // Variable indicating if the how to play section is expanded or not
       instructions_expanded: false,
     };
-
   };
 
   // Functions for handling game states from card component
@@ -211,35 +208,35 @@ class KatakanaGamePage extends Component {
       ...prevState,
       hasFlippedCard: new_flip_state,
     }))
-  } 
+  }; 
 
   setParentFirstCard = (new_first_card) => { 
     this.setState(prevState => ({
       ...prevState,
       firstCard: new_first_card,
     }))
-  } 
+  }; 
 
   setParentSecondCard = (new_second_card) => { 
     this.setState(prevState => ({
       ...prevState,
       secondCard: new_second_card,
     }))
-  } 
+  };
 
   setParentMatch = (new_match) => { 
     this.setState(prevState => ({
       ...prevState,
       match: new_match,
     }))
-  }
+  };
 
   setParentScore = (new_score) => { 
     this.setState(prevState => ({
       ...prevState,
       score: new_score,
     }))
-  }
+  };
 
   addToMatchHandler = (jpn_card) => {
     const newCard = jpn_card;
@@ -268,7 +265,7 @@ class KatakanaGamePage extends Component {
       ...prevState,
       match_collection_expanded: new_state,
     }))
-  }
+  };
 
   instructionsExpansionHandler  = () => { 
     let new_state = !this.state.instructions_expanded
@@ -276,7 +273,7 @@ class KatakanaGamePage extends Component {
       ...prevState,
       instructions_expanded: new_state,
     }))
-  }
+  };
 
   render() {
 

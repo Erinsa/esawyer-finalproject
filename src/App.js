@@ -32,7 +32,7 @@
 
 import logo from './logo.svg';
 import './App.css';
-import GamePage from './views/home/index.js';
+import KanjiGamePage from './views/home/kanjigamepage.js';
 import MenuPage from './views/home/menu.js';
 import HiraganaGamePage from './views/home/hiraganagamepage.js';
 import KatakanaGamePage from './views/home/katakanagamepage.js';
@@ -46,7 +46,7 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}>
           <Routes>
               <Route path='/' element={<MenuPage />} />
-              <Route path='/gamepage' element={<GamePage />} />
+              <Route path='/gamepage' element={<KanjiGamePage />} />
               <Route path='/menupage' element={<MenuPage />} />
               <Route path='/hiraganagamepage' element={<HiraganaGamePage />} />
               <Route path='/katakanagamepage' element={<KatakanaGamePage />} />

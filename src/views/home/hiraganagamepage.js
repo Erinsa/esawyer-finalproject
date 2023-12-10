@@ -6,7 +6,7 @@
 
 
 import React, { Component } from 'react';
-import './index.css';
+import './gamepage.css';
 import Card from './card.js';
 import CollectedMatch from './collectedmatch.js';
 import { Link } from 'react-router-dom';
@@ -211,35 +211,35 @@ class HiraganaGamePage extends Component {
       ...prevState,
       hasFlippedCard: new_flip_state,
     }))
-  } 
+  };
 
   setParentFirstCard = (new_first_card) => { 
     this.setState(prevState => ({
       ...prevState,
       firstCard: new_first_card,
     }))
-  } 
+  };
 
   setParentSecondCard = (new_second_card) => { 
     this.setState(prevState => ({
       ...prevState,
       secondCard: new_second_card,
     }))
-  } 
+  }; 
 
   setParentMatch = (new_match) => { 
     this.setState(prevState => ({
       ...prevState,
       match: new_match,
     }))
-  }
+  };
 
   setParentScore = (new_score) => { 
     this.setState(prevState => ({
       ...prevState,
       score: new_score,
     }))
-  }
+  };
 
   addToMatchHandler = (jpn_card) => {
     const newCard = jpn_card;
@@ -268,7 +268,7 @@ class HiraganaGamePage extends Component {
       ...prevState,
       match_collection_expanded: new_state,
     }))
-  }
+  };
 
   instructionsExpansionHandler  = () => { 
     let new_state = !this.state.instructions_expanded
@@ -276,7 +276,7 @@ class HiraganaGamePage extends Component {
       ...prevState,
       instructions_expanded: new_state,
     }))
-  }
+  };
 
   render() {
 

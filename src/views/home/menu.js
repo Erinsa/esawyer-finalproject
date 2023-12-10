@@ -52,6 +52,7 @@ class MenuPage extends Component {
           </AttentionSeeker>
 
           <section className = "character_menu" style={menu_state}>
+          <button className='close_button' onClick={() => {this.playExpansionHandler()}} aria-label = "Close character option menu button"></button>
             <div className = "character_menu_text">
               What would you like to practice?
             </div>

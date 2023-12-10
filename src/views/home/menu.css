@@ -168,3 +168,18 @@ body {
   background-color:rgba(0, 0, 0, 0);
   text-align: center;
 }
+
+.close_button {
+  width: 4%;
+  height: 7%;
+  position: absolute;
+  top: 18%;
+  right: 86.7%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-color: yellow; */
+  background-image: url("../../../public/assets/X_Button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
