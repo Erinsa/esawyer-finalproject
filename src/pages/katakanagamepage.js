@@ -324,7 +324,7 @@ class KatakanaGamePage extends Component {
 
     return (
     
-      <article className = "HomePage">
+      <main className = "HomePage">
         {/* Uses React router to help you return to menu following standard website conventions */}
         <a href = "#/menupage">
             <button className = "menu_button" aria-label = "Return to menu button">
@@ -415,7 +415,7 @@ class KatakanaGamePage extends Component {
           </div>
         </section>
 
-      </article>
+      </main>
 
     );
   }

@@ -326,7 +326,7 @@ class HiraganaGamePage extends Component {
 
     return (
     
-      <article className = "HomePage">
+      <main className = "HomePage">
         {/* Uses React router to help you return to menu following standard website conventions */}
         <a className = "other_link" href = "#/menupage">
           <button className = "menu_button" aria-label = "Return to menu button">
@@ -419,7 +419,7 @@ class HiraganaGamePage extends Component {
           </div>
         </section>
 
-      </article>
+      </main>
 
     );
   }

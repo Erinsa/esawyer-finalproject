@@ -33,7 +33,7 @@ class MenuPage extends Component {
       
       return (
       
-        <article className = "main_holder">
+        <main className = "main_holder">
 
           <h1 className = "menu_title">Moji Match</h1>
 
@@ -66,7 +66,7 @@ class MenuPage extends Component {
             </div>
           </section>
   
-        </article>
+        </main>
   
       );
     }
