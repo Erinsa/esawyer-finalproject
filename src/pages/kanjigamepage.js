@@ -327,7 +327,7 @@ class KanjiGamePage extends Component {
     
       <main className = "HomePage">
         {/* Uses React router to help you return to menu following standard website conventions */}
-        <a href = "/menupage">
+        <a href = "#/menupage">
           <button className= "menu_button" aria-label = "Return to menu button">
             <h1 className = "menu_button_text">Moji Match</h1>
           </button>
