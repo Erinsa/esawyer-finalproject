@@ -313,7 +313,7 @@ class KatakanaGamePage extends Component {
     
       <article className = "HomePage">
         {/* Uses React router to help you return to menu following standard website conventions */}
-        <Link to="/menupage"><button className='menu_button' aria-label='Return to menu button'>Moji Match</button></Link>
+        <Link to="#/menupage"><button className='menu_button' aria-label='Return to menu button'>Moji Match</button></Link>
 
         {/* Code for matches section (small) */}
         <section className='matches_counter_small'>
@@ -390,7 +390,7 @@ class KatakanaGamePage extends Component {
             CONGRATS! You've won! Great job studying!
           </div>
           <div className='winning_button_holder'>
-            <Link to="/menupage"><button className='back_to_menu_button' aria-label = "Back to menu button">Return to Menu</button></Link>
+            <Link to="#/menupage"><button className='back_to_menu_button' aria-label = "Back to menu button">Return to Menu</button></Link>
           </div>
         </section>
 

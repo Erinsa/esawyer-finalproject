@@ -43,7 +43,7 @@ import { Routes, Route, HashRouter, BrowserRouter as Router} from 'react-router-
 function App() {
   return (
     <>
-      <Router basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
           <Routes>
               <Route path='/' element={<MenuPage />} />
               <Route path='/gamepage' element={<KanjiGamePage />} />
@@ -51,7 +51,7 @@ function App() {
               <Route path='/hiraganagamepage' element={<HiraganaGamePage />} />
               <Route path='/katakanagamepage' element={<KatakanaGamePage />} />
           </Routes>
-        </Router>
+        </HashRouter>
         <MusicPlayer />
     </>
   );
