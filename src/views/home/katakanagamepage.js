@@ -390,7 +390,7 @@ class KatakanaGamePage extends Component {
             CONGRATS! You've won! Great job studying!
           </div>
           <div className='winning_button_holder'>
-            <Link to="#/menupage"><button className='back_to_menu_button' aria-label = "Back to menu button">Return to Menu</button></Link>
+            <Link to="/menupage"><button className='back_to_menu_button' aria-label = "Back to menu button">Return to Menu</button></Link>
           </div>
         </section>
 
