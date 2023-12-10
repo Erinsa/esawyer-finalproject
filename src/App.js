@@ -43,7 +43,8 @@ import { Routes, Route, HashRouter, BrowserRouter as Router} from 'react-router-
 function App() {
   return (
     <>
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      {/* <HashRouter basename={process.env.PUBLIC_URL}> */}
+      <HashRouter basename="/esawyer-finalproject" hashType="hashbang">
           <Routes>
               <Route path='/' element={<MenuPage />} />
               <Route path='/gamepage' element={<KanjiGamePage />} />
