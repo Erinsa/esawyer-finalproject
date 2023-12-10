@@ -50,7 +50,7 @@ function App() {
               <Route exact path='/kanjigamepage' element={<KanjiGamePage />} />
               <Route exact path='/menupage' element={<MenuPage />} />
               <Route exact path='/hiraganagamepage' element={<HiraganaGamePage />} />
-              <Route exactpath='/katakanagamepage' element={<KatakanaGamePage />} />
+              <Route exact path='/katakanagamepage' element={<KatakanaGamePage />} />
           </Routes>
         </HashRouter>
         <MusicPlayer />

@@ -201,15 +201,25 @@ body {
   box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5);
 }
 
+.menu_button_text{
+  position: absolute;
+  text-align: center;
+  top: -21%;
+  right: 19%;
+  font-size: 4vw;
+  color: black;
+  text-shadow: 1px 1px 0 white; 
+}
+
 .menu_button {
   width: 30%;
   height: 14%;
   position: absolute;
   top: 5%;
   right: 69%;
-  font-size: 4vw;
+  /* font-size: 4vw;
   color: black;
-  text-shadow: 1px 1px 0 white; 
+  text-shadow: 1px 1px 0 white;  */
   border: none;
   background-color: rgba(0, 0, 0, 0);
   background-image: url("../../../public/assets/Menu_Button.png");
@@ -349,7 +359,7 @@ body {
     z-index: 4;
   }
 
-  .close_button {
+  .close_button_gamepage {
     width: 15%;
     height: 15%;
     position: relative;

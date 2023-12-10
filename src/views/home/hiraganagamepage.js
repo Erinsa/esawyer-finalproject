@@ -316,7 +316,7 @@ class HiraganaGamePage extends Component {
     
       <article className = "HomePage">
         {/* Uses React router to help you return to menu following standard website conventions */}
-        <a href="#/menupage"><button className='menu_button' aria-label='Return to menu button'>Moji Match</button></a>
+        <a className = "other_link" href="#/menupage"><button className='menu_button' aria-label='Return to menu button'><h1 className = "menu_button_text">Moji Match</h1></button></a>
 
         {/* Code for matches section (small) */}
         <section className='matches_counter_small'>
@@ -349,7 +349,7 @@ class HiraganaGamePage extends Component {
         <button className='help_button' onClick={() => {this.instructionsExpansionHandler()}} aria-label='How to play button'>How to Play</button>
         <section className='help_message' style = {instructions_state}>
           <div className = "help_text"> Flip over cards to try to match the Japanese characters to their English meaning!</div>
-          <button className='close_button' onClick={() => {this.instructionsExpansionHandler()}}></button>
+          <button className='close_button' onClick={() => {this.instructionsExpansionHandler()}} aria-label='closes how to play section'></button>
         </section>
         
         {/* Code for main game board and cards on it */}

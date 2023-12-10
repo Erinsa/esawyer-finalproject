@@ -37,7 +37,7 @@ class MenuPage extends Component {
       
         <article className='main_holder'>
 
-          <header className='menu_title'>Moji Match</header>
+          <h1 className='menu_title'>Moji Match</h1>
 {/* 
           <Link to="/gamepage"><button className='play_button' aria-label = "Play Button">Play!</button></Link> */}
           <button className='play_button' onClick={() => {this.playExpansionHandler()}} aria-label='Play button'>Play!</button>
@@ -45,10 +45,10 @@ class MenuPage extends Component {
           {/* Reference for react awesome reveal attention seekers:
           https://react-awesome-reveal.morello.dev/guides/attention-seekers */}
           <AttentionSeeker className = "reveal_squid" effect = "pulse" duration = "2000" triggerOnce = "false" delay = "50">
-            <img className = "menu_squid" src = {"Menu_Squid.png"} width = "200" alt = {"A cheery, green cartoonish squid holding a burst of ink, a Japanese flag, a pencil, a caligraphy pen, a Michigan State University Japanese Department flag, a paint brush, and paper for practicing Japanese characters. "}  />
+            <img className = "menu_squid" src = {"Menu_Squid.png"} width = "200" alt = {"A green cartoonish squid holding a burst of ink, flags, writing utensils, and paper"}  />
           </AttentionSeeker>
           <AttentionSeeker className = "reveal_bubble" effect = "pulse" duration = "2000" delay = "125" >
-            <img className = "menu_bubble" src = {"assets/Menu_Bubble.png"} width = "200" alt = {"A cartoonish bubble holding the Japanese Kanji character that amkes up the first half of the word Kanji in Japanese."}  />
+            <img className = "menu_bubble" src = {"assets/Menu_Bubble.png"} width = "200" alt = {"A cartoonish bubble holding a Japanese Kanji character"}  />
           </AttentionSeeker>
 
           <section className = "character_menu" style={menu_state}>
