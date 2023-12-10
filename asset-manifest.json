@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/esawyer-finalproject/static/css/main.fe0dc700.css",
-    "main.js": "/esawyer-finalproject/static/js/main.92a47e6a.js",
+    "main.js": "/esawyer-finalproject/static/js/main.dae47aa8.js",
     "static/js/787.751a1cd1.chunk.js": "/esawyer-finalproject/static/js/787.751a1cd1.chunk.js",
     "static/media/MojiMatchHome_AdjustedAgain4.png": "/esawyer-finalproject/static/media/MojiMatchHome_AdjustedAgain4.b610dbb274e87710d4d4.png",
     "static/media/Union.png": "/esawyer-finalproject/static/media/Union.d0abb558f15c90050c06.png",
@@ -18,11 +18,11 @@
     "static/media/logo.svg": "/esawyer-finalproject/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/esawyer-finalproject/index.html",
     "main.fe0dc700.css.map": "/esawyer-finalproject/static/css/main.fe0dc700.css.map",
-    "main.92a47e6a.js.map": "/esawyer-finalproject/static/js/main.92a47e6a.js.map",
+    "main.dae47aa8.js.map": "/esawyer-finalproject/static/js/main.dae47aa8.js.map",
     "787.751a1cd1.chunk.js.map": "/esawyer-finalproject/static/js/787.751a1cd1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe0dc700.css",
-    "static/js/main.92a47e6a.js"
+    "static/js/main.dae47aa8.js"
   ]
 }
