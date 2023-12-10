@@ -27,6 +27,8 @@
 // https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
 // Used this person's working react routed gh pages repo as a reference for debugging (found through above link)
 // https://github.com/umair-mirza/safetyapp/tree/main 
+// This is the reference that FINALLY ended up working for me!
+// https://github.com/CodingAbdullah/Medium-Demo-React-Gh-Pages/tree/main
 
 
 
@@ -43,19 +45,15 @@ import { Routes, Route, HashRouter, BrowserRouter as Router} from 'react-router-
 function App() {
   return (
     <>
-      {/* <HashRouter basename={process.env.PUBLIC_URL}> */}
-      {/* <HashRouter basename="/esawyer-finalproject" hashType="hashbang"> */}
-      {/* <Router basename={process.env.PUBLIC_URL}> */}
       <HashRouter>
           <Routes>
               <Route exact path='/' element={<MenuPage />} />
-              <Route exact path='/gamepage' element={<KanjiGamePage />} />
+              <Route exact path='/kanjigamepage' element={<KanjiGamePage />} />
               <Route exact path='/menupage' element={<MenuPage />} />
               <Route exact path='/hiraganagamepage' element={<HiraganaGamePage />} />
               <Route exactpath='/katakanagamepage' element={<KatakanaGamePage />} />
           </Routes>
         </HashRouter>
-        {/* </Router> */}
         <MusicPlayer />
     </>
   );

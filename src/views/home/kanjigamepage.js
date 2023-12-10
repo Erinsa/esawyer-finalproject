@@ -316,7 +316,7 @@ class KanjiGamePage extends Component {
     
       <article className = "HomePage">
         {/* Uses React router to help you return to menu following standard website conventions */}
-        <Link to="/menupage"><button className='menu_button' aria-label='Return to menu button'>Moji Match</button></Link>
+        <a href="/menupage"><button className='menu_button' aria-label='Return to menu button'>Moji Match</button></a>
 
         {/* Code for matches section (small) */}
         <section className='matches_counter_small'>
@@ -393,7 +393,7 @@ class KanjiGamePage extends Component {
             CONGRATS! You've won! Great job studying!
           </div>
           <div className='winning_button_holder'>
-            <Link to="/menupage"><button className='back_to_menu_button' aria-label = "Back to menu button">Return to Menu</button></Link>
+            <a href="#/menupage"><button className='back_to_menu_button' aria-label = "Back to menu button">Return to Menu</button></a>
           </div>
         </section>
 
