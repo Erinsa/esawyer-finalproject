@@ -39,7 +39,6 @@ import MenuPage from './views/home/menu.js';
 import HiraganaGamePage from './views/home/hiraganagamepage.js';
 import KatakanaGamePage from './views/home/katakanagamepage.js';
 import MusicPlayer from './views/home/music.js';
-import Home from './views/home/Home.js';
 import { Routes, Route, HashRouter, BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
