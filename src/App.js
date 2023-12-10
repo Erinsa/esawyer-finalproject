@@ -45,16 +45,17 @@ function App() {
     <>
       {/* <HashRouter basename={process.env.PUBLIC_URL}> */}
       {/* <HashRouter basename="/esawyer-finalproject" hashType="hashbang"> */}
-      <Router basename={process.env.PUBLIC_URL}>
+      {/* <Router basename={process.env.PUBLIC_URL}> */}
+      <HashRouter>
           <Routes>
-              <Route path='/' element={<MenuPage />} />
-              <Route path='/gamepage' element={<KanjiGamePage />} />
-              <Route path='/menupage' element={<MenuPage />} />
-              <Route path='/hiraganagamepage' element={<HiraganaGamePage />} />
-              <Route path='/katakanagamepage' element={<KatakanaGamePage />} />
+              <Route exact path='/' element={<MenuPage />} />
+              <Route exact path='/gamepage' element={<KanjiGamePage />} />
+              <Route exact path='/menupage' element={<MenuPage />} />
+              <Route exact path='/hiraganagamepage' element={<HiraganaGamePage />} />
+              <Route exactpath='/katakanagamepage' element={<KatakanaGamePage />} />
           </Routes>
-        {/* </HashRouter> */}
-        </Router>
+        </HashRouter>
+        {/* </Router> */}
         <MusicPlayer />
     </>
   );

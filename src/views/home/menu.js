@@ -57,7 +57,8 @@ class MenuPage extends Component {
               What would you like to practice?
             </div>
             <div className = "character_menu_button_holder">
-              <Link className = "character_menu_button" to="/hiraganagamepage"><button className = "actual_button" aria-label = "Hiragana Button">Hiragana</button></Link>
+              {/* <Link className = "character_menu_button" to="/hiraganagamepage"><button className = "actual_button" aria-label = "Hiragana Button">Hiragana</button></Link> */}
+              <a className = "character_menu_button" href="#/hiraganagamepage"><button className = "actual_button" aria-label = "Hiragana Button">Hiragana</button></a>
               <Link className = "character_menu_button" to="/katakanagamepage"><button className = "actual_button" aria-label = "Katakana Button">Katakana</button></Link>
               <Link className = "character_menu_button" to="/gamepage"><button className = "actual_button" aria-label = "Kanji Button">Kanji</button></Link>
             </div>
