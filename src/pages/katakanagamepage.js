@@ -363,7 +363,7 @@ class KatakanaGamePage extends Component {
         <button className = "help_button" onClick = {() => {this.instructionsExpansionHandler()}} aria-label = "How to play button">How to Play</button>
         <section className = "help_message" style = {instructions_state}>
           <div className = "help_text"> Flip over cards to try to match the Japanese characters to their English meaning!</div>
-          <button className = "close_button" onClick = {() => {this.instructionsExpansionHandler()}} aria-label = "Closes how to play section"></button>
+          <button className = "close_button_gamepage" onClick = {() => {this.instructionsExpansionHandler()}} aria-label = "Closes how to play section"></button>
         </section>
         
         {/* Code for main game board and cards on it */}
