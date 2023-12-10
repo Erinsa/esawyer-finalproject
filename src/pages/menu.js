@@ -42,7 +42,7 @@ class MenuPage extends Component {
           {/* Reference for react awesome reveal attention seekers:
           https://react-awesome-reveal.morello.dev/guides/attention-seekers */}
           <AttentionSeeker className = "reveal_squid" effect = "pulse" duration = "2000" triggerOnce = "false" delay = "50">
-            <img className = "menu_squid" src = {"Menu_Squid.png"} width = "200" alt = {"A green cartoonish squid holding a burst of ink, flags, writing utensils, and paper"}/>
+            <img className = "menu_squid" src = {"assets/Menu_Squid.png"} width = "200" alt = {"A green cartoonish squid holding a burst of ink, flags, writing utensils, and paper"}/>
           </AttentionSeeker>
           <AttentionSeeker className = "reveal_bubble" effect = "pulse" duration = "2000" delay = "125" >
             <img className = "menu_bubble" src = {"assets/Menu_Bubble.png"} width = "200" alt = {"A cartoonish bubble holding a Japanese Kanji character"}/>
