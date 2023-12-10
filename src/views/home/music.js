@@ -1,3 +1,9 @@
+// General References:
+
+// Howler Library:
+// https://stackoverflow.com/questions/54886538/how-to-use-howler-js-in-react
+// https://howlerjs.com/
+
 import React, { Component } from 'react';
 import './music.css';
 import { Howl, Howler } from 'howler';
@@ -16,6 +22,8 @@ class MusicPlayer extends Component {
 
   };
 
+//   Used the following to help debug with Howler and React
+//   https://stackoverflow.com/questions/70127003/howler-js-react-audiocontext-console-warning
   musicController = () => { 
     if (this.state.music == false){
       this.state.sound.play();

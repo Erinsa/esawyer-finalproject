@@ -19,85 +19,16 @@ class Card extends Component {
     };   
   }
 
-
-  // toggleFlip() {
-
-  //   let hasFlippedCard_var = this.state.hasFlippedCard;
-  //   let firstCard_var = this.state.firstCard;
-
-  //   if (this.state.hasFlippedCard == true) {
-  //     if (this.props.card_match == this.state.firstCard.card_match){
-  //       this.state.firstCard.removeEventListener('click');
-  //       this.removeEventListener('click');
-  //     }
-  //   }
-
-  //   if (this.state.hasFlippedCard == false) {
-  //     console.log("flippy",)
-  //     let hasFlippedCard_var = true;
-  //     let firstCard_var = this;
-  //   }
-
-
-  //   this.setState({
-  //     flip: !this.state.flip,
-  //     // hasFlippedCard: hasFlippedCard_var,
-  //     // firstCard: firstCard_var
-  //   })
-  //   console.log(this.state.flip)
-
-  //   this.props.setParentFlippedCard(hasFlippedCard_var)
-
-  //   // if (!this.state.hasFlippedCard) {
-  //   //   hasFlippedCard = true;
-  //   //   firstCard = this;
-  //   // }
-  // };
-
-  // check_match
-
-  // toggleFlip() {
-  //   let new_flip_state = !this.state.flip;
-  //   this.setState({
-  //     flip: new_flip_state,
-  //     // hasFlippedCard: hasFlippedCard_var,
-  //     // firstCard: firstCard_var
-  //   })
-  // }
-
   toggleFlipAction() {
 
-    console.log("flip_state 1", this.state.flip)
-
-    // this.setState({
-    //   flip: !this.state.flip,
-    //   // hasFlippedCard: hasFlippedCard_var,
-    //   // firstCard: firstCard_var
-    // })
-    // console.log("flip_state 2", this.state.flip)
-
-    // this.setState({
-    //   flip: true,
-    //   // hasFlippedCard: hasFlippedCard_var,
-    //   // firstCard: firstCard_var
-    // })
-    // console.log("wassup", this.props.hasFlippedCard);
     let hasFlippedCard_var = this.props.hasFlippedCard;
     let firstCard_var = this.props.firstCard;
     let secondCard_var = this.props.secondCard;
 
     if (hasFlippedCard_var == true) {
-      // if (firstCard_var.lang == this.lang){
-
-      // }
-      // if (firstCard_var.lang != this.lang) {
       this.props.setParentSecondCard(this)
-      // console.log("match 1:", this.props.card_match, "match 2:", this.props.firstCard.props.card_match);
       if (this.props.card_match == this.props.firstCard.props.card_match && firstCard_var != this){
         console.log("match");
-        // this.props.firstCard.removeEventListener('click');
-        // this.removeEventListener('click');
-        // console.log("hello");
         let collected_card_choice = ""
         setTimeout(() => { 
           let new_match_state = true;
@@ -115,7 +46,6 @@ class Card extends Component {
         setTimeout(() => { 
           let matched_first_card = this.props.firstCard;
           matched_first_card.state.matched = true;
-          // this.props.firstCard.state.flip = false;
           let new_matched_state = true;
           let new_match_state2 = false;
           console.log("score", this.props.score)
@@ -191,6 +121,9 @@ class Card extends Component {
       flip: new_flip_state,
     }, this.toggleFlipAction)
   }
+
+  // Used this reference for help enabling enter key press to activate flip:
+  // https://stackoverflow.com/questions/31272207/to-call-onchange-event-after-pressing-enter-key
   toggleFlipKey(e) {
     if (e.key === 'Enter') {
     let new_flip_state = !this.state.flip;
@@ -223,6 +156,9 @@ class Card extends Component {
 
     return (
 
+      // Used these references to learn about tab index (helped with accesibility)
+      // https://stackoverflow.com/questions/73401150/tab-selection-ignores-all-elements-generated-within-loop-in-react
+      // https://stackoverflow.com/questions/43503964/onkeydown-event-not-working-on-divs-in-react
       <div className= "memory_card" onClick={() => {{this.toggleFlip()}}} onKeyDown={(e) => {{this.toggleFlipKey(e)}}} style = {flip_matched_state} tabIndex={0} aria-label='Memory Card'>
           <img className = "back-face" src = {this.props.card_back_img_src} width = "200" alt = {this.props.card_back_img_alt} style={visible_state} />
           <img className = "front-face" src = {this.props.card_front_img_src} width = "200" alt = {this.props.card_front_img_alt} style={visible_state}/>
