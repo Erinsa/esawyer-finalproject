@@ -1,0 +1,43 @@
+/* Generally used the following order within styling throughout
+width
+height
+display
+position
+flex
+direction
+wrap
+justify-content
+align-content
+align-items
+column-gap
+text-align
+font-family
+font-size
+font-weight
+padding
+border
+margin
+color
+background-color
+opacity
+cursor
+anything else */
+
+.collected_card {
+    width: 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.jpn_card {
+    width: 100%;
+    border: solid black .05px;
+    border-radius: 15%;
+}
+
+.collected_definition {
+    text-align: center;
+    font-size: 1vw;
+    color: black;
+}

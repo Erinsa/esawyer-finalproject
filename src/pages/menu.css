@@ -1,14 +1,39 @@
+/* Generally used the following order within styling throughout
+width
+height
+display
+flex
+direction
+wrap
+justify-content
+align-content
+align-items
+column-gap
+position
+text-align
+font-family
+font-size
+font-weight
+padding
+border
+margin
+color
+background-color
+opacity
+cursor
+anything else */
+
 * {
-    box-sizing: border-box;
-    font-family: "Itim", sans-serif;
+  box-sizing: border-box;
+  font-family: "Itim", sans-serif;
   }
   
 body {
-    background-color: #018E8E;
-    width: 100%
+  width: 100%;
+  background-color: #018E8E;
 }
   
-.menu_page{
+.menu_page {
   width: 100%;
   height: 100%;
   position:relative;
@@ -16,13 +41,13 @@ body {
   left: 0;
   right: 0;
   bottom:0;
-  background-image: url("../../../public/assets/MojiMatchHome_AdjustedAgain4.png");
+  margin: 0;
+  padding: 0;
+  background-image: url("../../public/assets/MojiMatchHome_AdjustedAgain4.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #018E8E;
   background-position: center top;
-  margin: 0;
-  padding: 0;
 }
 
 /* The following reference helped me with font border */
@@ -33,17 +58,17 @@ body {
   position: absolute;
   top: -10%;
   right: 18%;
-  font-size: 9vw;
   text-align: center;
+  font-size: 9vw;
+  border: none;
+  padding: 2.5% 0% 0% 0%;
   color: black;
   text-shadow: 2px 2px 0 white; 
-  border: none;
   background-color: rgba(0, 0, 0, 0);
-  background-image: url("../../../public/assets/Menu_Button.png");
+  background-image: url("../../public/assets/Menu_Button.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 2.5% 0% 0% 0%;
 }
 
 .play_button {
@@ -53,17 +78,17 @@ body {
   top: 40%;
   right: 20%;
   font-size: 5vw;
-  color: white;
   border: none;
+  padding: 0% 0% 1% 0%;
+  color: white;
   background-color: rgba(0, 0, 0, 0);
-  background-image: url("../../../public/assets/Ink.png");
+  background-image: url("../../public/assets/Ink.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 0% 0% 1% 0%;
 }
 
-.main_holder{
+.main_holder {
   width: 100%;
   height: 57.6vw;
   position:relative;
@@ -71,56 +96,55 @@ body {
   left: 0;
   right: 0;
   bottom:0;
-  background-image: url("../../../public/assets/MojiMatchHome_AdjustedAgain4.png");
+  margin: 0;
+  padding: 0;
+  background-image: url("../../public/assets/MojiMatchHome_AdjustedAgain4.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #018E8E;
   background-position: center top;
-  margin: 0;
-  padding: 0;
 }
 
-.menu_squid{
+.menu_squid {
   width: 100%;
   transform: rotate(4deg);
 }
 
-.reveal_squid{
+.reveal_squid {
   width: 36%;
   position: absolute;
   top: 28%;
   left: 60%;
 }
 
-.menu_bubble{
+.menu_bubble {
   width: 100%;
   position: absolute;
   transform: rotate(6deg);
 }
 
-.reveal_bubble{
+.reveal_bubble {
   width: 25%;
   position: absolute;
   top: 10%;
   left: 77%;
 }
 
-.character_menu{
+.character_menu {
   width: 100vw;
   height: 57.5vw;
   position: absolute;
   top: 0vw;
   right: 0vw;
   font-size: 5vw;
-  /* background-color: yellow; */
-  background-image: url("../../../public/assets/Ink.png");
+  background-image: url("../../public/assets/Ink.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 5;
 }
 
-.character_menu_text{
+.character_menu_text {
   width: 70%;
   height: 20%;
   position: absolute;
@@ -133,40 +157,38 @@ body {
   z-index: 6;
 }
 
-.character_menu_button_holder{
-  display: flex;
-  column-gap: 6%;
+.character_menu_button_holder {
   width: 60%;
+  display: flex;
+  justify-content: center;
+  column-gap: 6%;
   position: absolute;
   top: 51%;
   right: 22%;
   z-index: 6;
-  /* background-color: yellow; */
-  justify-content: center;
 }
 
-.character_menu_button{
-  padding: 1% 2% 1% 2%;
-  text-align: center;
+.character_menu_button {
   position: relative;
+  text-align: center;
   font-size: 2.5vw;
   border: none;
   border-radius: 16px;
+  padding: 1% 2% 1% 2%;
   color: white;
   background-color:#018E8E;
   box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, 0.5);
 }
 
 
-.actual_button{
-  /* padding: 1% 3% 1% 3%; */
+.actual_button {
   position: relative;
+  text-align: center;
   font-size: 2.5vw;
   border: none;
   border-radius: 16px;
   color: white;
   background-color:rgba(0, 0, 0, 0);
-  text-align: center;
 }
 
 .close_button {
@@ -177,8 +199,7 @@ body {
   right: 86.7%;
   border: none;
   background-color: rgba(0, 0, 0, 0);
-  /* background-color: yellow; */
-  background-image: url("../../../public/assets/X_Button.png");
+  background-image: url("../../public/assets/X_Button.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;

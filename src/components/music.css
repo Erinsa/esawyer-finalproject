@@ -1,7 +1,32 @@
+/* Generally used the following order within styling throughout
+width
+height
+display
+flex
+direction
+wrap
+justify-content
+align-content
+align-items
+column-gap
+position
+text-align
+font-family
+font-size
+font-weight
+padding
+border
+margin
+color
+background-color
+opacity
+cursor
+anything else */
+
 * {
     box-sizing: border-box;
     font-family: "Itim", sans-serif;
-  }
+}
   
 .music_button_true {
     width: 5vw;
@@ -9,28 +34,28 @@
     position: absolute;
     top: 52vw;
     right:93vw;
-    color: #018E8E;
     border: none;
+    color: #018E8E;
     background-color: rgba(0, 0, 0, 0);
-    background-image: url("../../../public/assets/Music_Button.png");
+    background-image: url("../../public/assets/Music_Button.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: 4;
   }
 
-  .music_button_false {
+.music_button_false {
     width: 5vw;
     height: 5vw;
     position: absolute;
     top: 52vw;
     right:93vw;
-    color: #018E8E;
     border: none;
+    color: #018E8E;
     background-color: rgba(0, 0, 0, 0);
-    background-image: url("../../../public/assets/No_Music_Button.png");
+    background-image: url("../../public/assets/No_Music_Button.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: 4;
-  }
+}

@@ -34,11 +34,11 @@
 
 import logo from './logo.svg';
 import './App.css';
-import KanjiGamePage from './views/home/kanjigamepage.js';
-import MenuPage from './views/home/menu.js';
-import HiraganaGamePage from './views/home/hiraganagamepage.js';
-import KatakanaGamePage from './views/home/katakanagamepage.js';
-import MusicPlayer from './views/home/music.js';
+import KanjiGamePage from './pages/kanjigamepage.js';
+import MenuPage from './pages/menu.js';
+import HiraganaGamePage from './pages/hiraganagamepage.js';
+import KatakanaGamePage from './pages/katakanagamepage.js';
+import MusicPlayer from './components/music.js';
 import { Routes, Route, HashRouter, BrowserRouter as Router} from 'react-router-dom';
 
 function App() {

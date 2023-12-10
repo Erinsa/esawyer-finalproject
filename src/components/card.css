@@ -1,0 +1,55 @@
+/* Generally used the following order within styling throughout
+width
+height
+display
+position
+flex
+direction
+wrap
+justify-content
+align-content
+align-items
+column-gap
+text-align
+font-family
+font-size
+font-weight
+padding
+border
+margin
+color
+background-color
+opacity
+cursor
+anything else */
+  
+.memory_card {
+    height: 24.5%;
+    position: relative;
+    display: flex;
+    flex: 0 1 18%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    transform-style: preserve-3d; 
+}
+
+.flip_state {
+    transform: rotateY(-180deg);
+}
+
+.memory:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.front-face, .back-face {
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}

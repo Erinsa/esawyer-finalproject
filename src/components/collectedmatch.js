@@ -13,9 +13,9 @@ class CollectedMatch extends Component {
 
     return (
 
-      <section className= "collected_card">
+      <section className = "collected_card">
           <img className = "jpn_card" src = {this.props.card_img} alt = {this.props.card_img_alt} />
-          <div className= "collected_definition">{this.props.card_match}</div>
+          <div className = "collected_definition">{this.props.card_match}</div>
       </section>      
 
     );
